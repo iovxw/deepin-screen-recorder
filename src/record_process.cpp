@@ -90,6 +90,7 @@ void RecordProcess::recordVideo()
     // FFmpeg need pass arugment split two part: -option value,
     // otherwise, it will report 'Unrecognized option' error.
     QStringList arguments;
+    arguments << QString("-a");
     arguments << QString("-video_size");
     arguments << QString("%1x%2").arg(recordWidth).arg(recordHeight);
     arguments << QString("-framerate");
